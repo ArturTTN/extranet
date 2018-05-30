@@ -10,5 +10,16 @@ Elixir ~> 1.6.0
 
 Basic operations:
 
-Api.stream(%{ "driver": "", "ipcc": "", "username": "", "password": "" })
+Start apps separetly
+
+- first app
+  cd /apps/api && iex --sname api2@localhost -S mix
+  run command Api.stream([%{ "driver": "", "ipcc": "", "username": "", "password": "" }])
+- second app
+  cd /apps/sabre && iex --sname sabre@localhost -S mix
+  watch output
+
+
+
+
 
